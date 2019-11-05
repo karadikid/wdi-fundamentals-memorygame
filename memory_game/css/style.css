@@ -19,8 +19,8 @@ h1 {
     margin: 0;
     }
 nav {
-    background-color: #00A6B3;
-    font: #FFFFFF;
+    background: #00A6B3;
+    color: #FFFFFF;
     padding: 20px 0;
 }
 h2 {
@@ -40,12 +40,13 @@ p {
     }
 a {
     font-family: 'Bitter', serif;
-    color: #0D2C40;
+    color: white;
     letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 600px;
+    font-size: 18px;
     text-decoration: none;
     border-bottom: 2px solid transparent;
+    margin: 0 20px;
 }
 footer {
     padding: 0px 20px;
