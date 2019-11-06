@@ -32,6 +32,17 @@ Step 1 Select card + push onto array
 Step 2 Select card + push onto array
 Step 3 Compare Array element for card one to array element for card two and log output
 */
+
+function createBoard(){
+    for (var i=0; i < cards.length; i++){
+        var cardElement = document.createElement('img');
+        cardElement.setAttribute('src',"images/back.png");
+        cardElement.setAttribute('data-id',i);
+        cardElement.addEventListener('click', flipCard);
+        document.getElementById('game-board').appendChild(cardElement);
+    }
+}
+
 function checkForMatch(){
     if (cardsInPlay[0] === cardsInPlay[1]){
         console.log("You found a match!");
@@ -40,20 +51,18 @@ function checkForMatch(){
     }
 }
 
-function flipCard(cardId){
+function flipCard(){
+    var cardId = this.getElementById('data-id');
     cardOne = cards[cardId].rank;
     cardsInPlay.push(cardOne);
-    cardId = Math.floor((Math.random() * (3 - 0)) +0);
     cardTwo = cards[cardId].rank;
     cardsInPlay.push(cardTwo);
     console.log("User flipped " + cards[cardId].rank);
     checkForMatch();
 }
 
-cardId = Math.floor((Math.random() * 4) +1);
-console.log(cardId);
-flipCard(cardId);
 
+createBoard();
 
 
 
